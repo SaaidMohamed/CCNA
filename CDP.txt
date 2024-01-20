@@ -1,0 +1,29 @@
+-----------
+Enable CDP
+-----------
+
+SW1(config)#cdp run                          --->(enable CDP all interfaces)
+
+SW1(config)#interface fastEthernet0/6        --->(enable CDP specific interface)
+SW1(config-if)#no cdp enable 
+
+
+
+------------
+Disable CDP
+------------
+
+SW1(config)#no cdp run                      --->(disable CDP all interfaces)
+
+SW1(config)#interface fastEthernet0/6       --->(disable CDP specific interface)
+SW1(config-if)#no cdp enable 
+
+
+
+--------------
+Troubleshoot
+--------------
+
+SW1#show cdp
+SW1#show cdp neighbors
+SW1#show cdp neighbors detail 
