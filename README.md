@@ -4,7 +4,7 @@
 
 
 ## Description:
-[CCNA Configurations Commands](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) is a basic cisco IOS Configuration reference guide to configure ciscoswitches and routers. 
+[CCNA Configuration Guide](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) is a basic cisco IOS Configuration reference guide for configuring cisco switches and routers. 
 
 \*
 
