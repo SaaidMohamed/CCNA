@@ -24,6 +24,23 @@ Switch Managment IP:
       AccessSwitch1(config-if)#  exit
       AccessSwitch1(config)#     ip default-gateway 10.10.10.2
 ```
+## CDP (Cisco Discovery Protocol):
+Enable CDP
+```sh
+      AccessSwitch1(config)#cdp run                          (enable CDP all interfaces)
+      AccessSwitch1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+      AccessSwitch1(config-if)#no cdp enable 
+
+```
+Disable CDP
+```sh
+      AccessSwitch1(config)#no cdp run                      (disable CDP all interfaces)
+
+      AccessSwitch1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+      AccessSwitch1(config-if)#no cdp enable 
+
+
+```
 <!---
 
 
