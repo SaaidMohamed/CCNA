@@ -1,12 +1,12 @@
-# [Sesame][pypi-url]
+# [CCNA Configurations Commands][pypi-url]
 
-[pypi-url]: https://github.com/code50/67076879/blob/main/project/README.md
+[pypi-url]: https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html
 
 
 ## Description:
-[Sesame](https://github.com/code50/67076879/tree/main/project) is a virtual desktop assistant. It will help make your daily activities on your PC easier with voice commands. By performing a number of functions. Like creating or deleting new files, creating or deleting new folders, starting applications, searching Google, searching You tube, signing out of your account and shutting down or restarting your PC.
+[CCNA Configurations Commands](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) is a basic cisco IOS Configuration reference guide to configure ciscoswitches and routers. 
 
-Video Demo: <https://youtu.be/Tz3JNFO_JwI>
+\*
 
 
 ## Features:
@@ -76,6 +76,6 @@ For more information check out these libraries :
 ## Author:
 Mohamed Saaid
 
-
+*/
 
 
