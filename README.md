@@ -18,26 +18,25 @@ secure enable prompt:
 ```
 Switch Managment IP:
 ```sh
-      AccessSwitch1(config)#     interface vlan1
-      AccessSwitch1(config-if)#  ip address 10.10.10.2 255.255.255.0
-      AccessSwitch1(config-if)#  no shutdown
-      AccessSwitch1(config-if)#  exit
-      AccessSwitch1(config)#     ip default-gateway 10.10.10.2
+      SW1(config)#     interface vlan1
+      SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
+      SW1(config-if)#  no shutdown
+      SW1(config-if)#  exit
+      SW1(config)#     ip default-gateway 10.10.10.2
 ```
 ## CDP (Cisco Discovery Protocol):
 Enable CDP
 ```sh
-      AccessSwitch1(config)#cdp run                          (enable CDP all interfaces)
-      AccessSwitch1(config)#interface fastEthernet0/6        (enable CDP specific interface)
-      AccessSwitch1(config-if)#no cdp enable 
+      SW1(config)#cdp run                          (enable CDP all interfaces)
+      SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+      SW1(config-if)#no cdp enable 
 
 ```
 Disable CDP
 ```sh
-      AccessSwitch1(config)#no cdp run                      (disable CDP all interfaces)
-
-      AccessSwitch1(config)#interface fastEthernet0/6       (disable CDP specific interface)
-      AccessSwitch1(config-if)#no cdp enable 
+      SW1(config)#no cdp run                      (disable CDP all interfaces)
+      SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+      SW1(config-if)#no cdp enable 
 
 
 ```
