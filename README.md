@@ -12,7 +12,7 @@ name the device:
 ```sh
    SW1(config)#hostname AccessSwitch1
 ```
-secure console port:
+secure enable prompt:
 ```sh
    AccessSwitch1(config)#enable secret somePassword
 ```
