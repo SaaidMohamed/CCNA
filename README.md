@@ -40,6 +40,25 @@ Disable CDP
 
 
 ```
+
+## LLDP (link layer discovery protocol):
+Enable LLDP
+```sh
+      SW1(config)#lldp run                          (enable CDP all interfaces)
+      SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+      SW1(config-if)#lldp transmit 
+      SW1(config-if)#lldp receive
+
+```
+Disable LLDP
+```sh
+      SW1(config)#no lldp run                      (disable CDP all interfaces)
+      SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+      SW1(config-if)#no lldp transmit 
+      SW1(config-if)#no lldp receive
+
+
+```
 <!---
 
 
