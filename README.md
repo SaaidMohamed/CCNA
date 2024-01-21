@@ -6,7 +6,7 @@
 ## Description:
 [CCNA Configuration Guide](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) is a basic Cisco IOS Configuration reference guide for configuring Cisco switches and routers. 
 
-\*
+<!---
 
 
 ## Features:
@@ -76,6 +76,6 @@ For more information check out these libraries :
 ## Author:
 Mohamed Saaid
 
-*/
+--->
 
 
