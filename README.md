@@ -18,10 +18,11 @@ secure console port:
 ```
 Switch Managment IP:
 ```sh
-      SW1(config)#     interface vlan1
-      SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
-      SW1(config-if)#  no shutdown
-      SW1(config)#     ip default-gateway 10.10.10.2
+      AccessSwitch1(config)#     interface vlan1
+      AccessSwitch1(config-if)#  ip address 10.10.10.2 255.255.255.0
+      AccessSwitch1(config-if)#  no shutdown
+      AccessSwitch1(config-if)#  exit
+      AccessSwitch1(config)#     ip default-gateway 10.10.10.2
 ```
 <!---
 
