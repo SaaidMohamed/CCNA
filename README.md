@@ -1,4 +1,4 @@
-# [CCNA Configuration Commands Guide][pypi-url]
+# [CCNA Configuration Guide][pypi-url]
 
 [pypi-url]: https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html
 
