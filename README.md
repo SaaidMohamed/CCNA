@@ -66,6 +66,12 @@ Disable LLDP
 
 
 ```
+Troubleshoot LLDP
+```sh
+      SW1#show lldp
+      SW1#show lldp neighbors
+      SW1#show lldp neighbors detail 
+```
 <!---
 
 
