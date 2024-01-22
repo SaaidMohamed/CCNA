@@ -9,7 +9,7 @@
 
 ## Initial Configuration:
 
--name the device:
+*name the device:
 
 ```sh
    SW1(config)#hostname AccessSwitch1
