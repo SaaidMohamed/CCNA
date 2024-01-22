@@ -16,7 +16,7 @@ secure enable prompt:
 ```sh
    AccessSwitch1(config)#enable secret somePassword
 ```
-Switch Managment IP:
+SVI Managment IP:
 ```sh
       SW1(config)#     interface vlan1
       SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
