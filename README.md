@@ -9,19 +9,19 @@
 
 ## Initial Configuration:
 
-*name the device:
++name the device:
 
 ```sh
    SW1(config)#hostname AccessSwitch1
 ```
 
--secure enable prompt:
+*secure enable prompt:
 
 ```sh
    AccessSwitch1(config)#enable secret somePassword
 ```
 
--SVI Managment IP:
++SVI Managment IP:
 
 ```sh
       SW1(config)#     interface vlan1
