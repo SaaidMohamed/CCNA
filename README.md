@@ -41,7 +41,7 @@ Disable CDP
 
 
 ```
-Troubleshoot CDP
+Troubleshooting CDP
 ```sh
       SW1#show cdp
       SW1#show cdp neighbors
@@ -66,7 +66,7 @@ Disable LLDP
 
 
 ```
-Troubleshoot LLDP
+Troubleshooting LLDP
 ```sh
       SW1#show lldp
       SW1#show lldp neighbors
