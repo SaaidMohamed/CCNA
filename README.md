@@ -24,6 +24,7 @@ Switch Managment IP:
       SW1(config-if)#  exit
       SW1(config)#     ip default-gateway 10.10.10.2
 ```
+
 ## CDP (Cisco Discovery Protocol):
 Enable CDP
 ```sh
@@ -39,6 +40,12 @@ Disable CDP
       SW1(config-if)#no cdp enable 
 
 
+```
+Troubleshoot CDP
+```sh
+      SW1#show cdp
+      SW1#show cdp neighbors
+      SW1#show cdp neighbors detail 
 ```
 
 ## LLDP (link layer discovery protocol):
