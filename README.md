@@ -12,23 +12,23 @@
 +name the device:
 
 ```sh
-   SW1(config)#hostname AccessSwitch1
+SW1(config)#hostname AccessSwitch1
 ```
 
 *secure enable prompt:
 
 ```sh
-   AccessSwitch1(config)#enable secret somePassword
+AccessSwitch1(config)#enable secret somePassword
 ```
 
 +SVI Managment IP:
 
 ```sh
-      SW1(config)#     interface vlan1
-      SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
-      SW1(config-if)#  no shutdown
-      SW1(config-if)#  exit
-      SW1(config)#     ip default-gateway 10.10.10.2
+SW1(config)#     interface vlan1
+SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
+SW1(config-if)#  no shutdown
+SW1(config-if)#  exit
+SW1(config)#     ip default-gateway 10.10.10.2
 ```
 
 ## CDP (Cisco Discovery Protocol):
@@ -36,27 +36,27 @@
 -Enable CDP:
 
 ```sh
-      SW1(config)#cdp run                          (enable CDP all interfaces)
-      SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
-      SW1(config-if)#no cdp enable 
+SW1(config)#cdp run                          (enable CDP all interfaces)
+SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+SW1(config-if)#no cdp enable 
 
 ```
 
 -Disable CDP:
 
 ```sh
-      SW1(config)#no cdp run                      (disable CDP all interfaces)
-      SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
-      SW1(config-if)#no cdp enable 
+SW1(config)#no cdp run                      (disable CDP all interfaces)
+SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+SW1(config-if)#no cdp enable 
 
 
 ```
 -Troubleshooting CDP:
 
 ```sh
-      SW1#show cdp
-      SW1#show cdp neighbors
-      SW1#show cdp neighbors detail 
+SW1#show cdp
+SW1#show cdp neighbors
+SW1#show cdp neighbors detail 
 ```
 
 ## LLDP (link layer discovery protocol):
@@ -64,20 +64,20 @@
 -Enable LLDP:
 
 ```sh
-      SW1(config)#lldp run                          (enable CDP all interfaces)
-      SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
-      SW1(config-if)#lldp transmit 
-      SW1(config-if)#lldp receive
+SW1(config)#lldp run                          (enable CDP all interfaces)
+SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+SW1(config-if)#lldp transmit 
+SW1(config-if)#lldp receive
 
 ```
 
 -Disable LLDP:
 
 ```sh
-      SW1(config)#no lldp run                      (disable CDP all interfaces)
-      SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
-      SW1(config-if)#no lldp transmit 
-      SW1(config-if)#no lldp receive
+SW1(config)#no lldp run                      (disable CDP all interfaces)
+SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+SW1(config-if)#no lldp transmit 
+SW1(config-if)#no lldp receive
 
 
 ```
@@ -85,9 +85,9 @@
 -Troubleshooting LLDP:
 
 ```sh
-      SW1#show lldp
-      SW1#show lldp neighbors
-      SW1#show lldp neighbors detail 
+SW1#show lldp
+SW1#show lldp neighbors
+SW1#show lldp neighbors detail 
 ```
 <!---
 
