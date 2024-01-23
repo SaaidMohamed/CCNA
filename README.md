@@ -13,12 +13,14 @@
 
 ```sh
 SW1(config)#hostname AccessSwitch1
+
 ```
 
 *secure enable prompt:
 
 ```sh
 AccessSwitch1(config)#enable secret somePassword
+
 ```
 
 +SVI Managment IP:
@@ -29,6 +31,7 @@ SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
 SW1(config-if)#  no shutdown
 SW1(config-if)#  exit
 SW1(config)#     ip default-gateway 10.10.10.2
+
 ```
 
 ## CDP (Cisco Discovery Protocol):
@@ -49,7 +52,6 @@ SW1(config)#no cdp run                      (disable CDP all interfaces)
 SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
 SW1(config-if)#no cdp enable 
 
-
 ```
 -Troubleshooting CDP:
 
@@ -57,6 +59,7 @@ SW1(config-if)#no cdp enable
 SW1#show cdp
 SW1#show cdp neighbors
 SW1#show cdp neighbors detail 
+
 ```
 
 ## LLDP (link layer discovery protocol):
@@ -78,7 +81,6 @@ SW1(config)#no lldp run                      (disable CDP all interfaces)
 SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
 SW1(config-if)#no lldp transmit 
 SW1(config-if)#no lldp receive
-
 
 ```
 
