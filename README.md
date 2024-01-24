@@ -92,7 +92,7 @@ SW1#show lldp neighbors
 SW1#show lldp neighbors detail 
 ```
 
-## Configuring VLANs (Virtual Local Area Network):
+## VLANs (Virtual Local Area Network):
 
 -Create VLANs:
 
@@ -108,6 +108,16 @@ Switch(config-vlan)#exit
 Switch#configure terminal
 Switch(config)#no vlan 20
 Switch(config-vlan)#exit
+```
+
+-Assigning Static-Access Ports to a VLAN:
+
+```sh
+Switch#configure terminal
+Switch(config)#interface gigabitethernet 0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exit
 ```
 <!---
 
