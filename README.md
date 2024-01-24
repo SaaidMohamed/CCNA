@@ -91,6 +91,16 @@ SW1#show lldp
 SW1#show lldp neighbors
 SW1#show lldp neighbors detail 
 ```
+
+## Configuring VLANs (Virtual Local Area Network):
+
+-Create VLANS:
+
+```sh
+Switch#configure terminal
+Switch(config)#vlan 20
+Switch(config-vlan)#exit
+```
 <!---
 
 
