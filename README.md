@@ -119,6 +119,13 @@ Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 20
 Switch(config-if)#exit
 ```
+
+
+
+
+
+
+
 <!---
 
 
