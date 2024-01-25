@@ -134,6 +134,15 @@ Switch#show vlan
 Switch#copy running-config startup config
 ```
 
+-Troubleshooting VlANs:
+
+```sh
+SW1#show VLAN
+SW1#show vlan brief 
+SW1#show interfaces vlan 1
+SW1#show interfaces trunk
+```
+
 
 
 
