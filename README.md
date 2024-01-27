@@ -90,6 +90,7 @@ SW1(config-if)#no lldp receive
 SW1#show lldp
 SW1#show lldp neighbors
 SW1#show lldp neighbors detail 
+
 ```
 
 ## VLANs (Virtual Local Area Network):
@@ -100,6 +101,7 @@ SW1#show lldp neighbors detail
 Switch#configure terminal
 Switch(config)#vlan 20
 Switch(config-vlan)#exit
+
 ```
 
 -Delete VLANs:
@@ -108,6 +110,7 @@ Switch(config-vlan)#exit
 Switch#configure terminal
 Switch(config)#no vlan 20
 Switch(config-vlan)#exit
+
 ```
 
 -Assigning Static-Access Ports to a VLAN:
@@ -118,6 +121,7 @@ Switch(config)#interface gigabitethernet 0/1
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 20
 Switch(config-if)#exit
+
 ```
 
 -Configuring Trunk Ports:
@@ -132,6 +136,7 @@ Switch(config-if)#switchport trunk native vlan 20
 Switch(config-if)#exit
 Switch#show vlan
 Switch#copy running-config startup config
+
 ```
 
 
@@ -142,6 +147,7 @@ SW1#show VLAN
 SW1#show vlan brief 
 SW1#show interfaces vlan 1
 SW1#show interfaces trunk
+
 ```
 
 
