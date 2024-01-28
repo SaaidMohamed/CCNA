@@ -150,7 +150,7 @@ SW1#show interfaces trunk
 
 ```
 
--IPv6 Routing:
+## IPv6 Routing:
 
 ```sh
 Router(config)#ipv6 unicast-routing                --->(enable IPV6 Routing)
