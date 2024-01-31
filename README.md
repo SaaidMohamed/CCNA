@@ -150,7 +150,6 @@ SW1#show interfaces trunk
 
 ```
 
-
 ## IPv6 Routing:
 
 ```sh
@@ -161,8 +160,6 @@ Router(config)#ipv6 address 2001:db8:1:1::1/64     --->(enable global unicast ad
 Router(config)#no shutdown                         --->(enable Interface)
 
 ```
-
-
 
 
 
