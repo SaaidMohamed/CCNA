@@ -161,5 +161,3 @@ Router(config)#no shutdown                         --->(enable Interface)
 
 ```
 
-
-
