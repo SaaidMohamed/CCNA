@@ -158,6 +158,5 @@ Router(config)#interface GigabitEthernet0/0        --->(change to interface gig0
 Router(config-if)#ipv6 address fe80::1 link-local     --->(enable link-local IPv6)
 Router(config)#ipv6 address 2001:db8:1:1::1/64     --->(enable global unicast address IPv6)
 Router(config)#no shutdown                         --->(enable Interface)
-
 ```
 
