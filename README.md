@@ -177,3 +177,13 @@ Router(config)#ip route 10.10.10.0 255.255.255.0 10.10.1.1
 Router(config)#ip route 10.10.11.0 255.255.255.0 10.10.1.1 
 
 ```
+
+## Configure RIP:
+
+```sh
+Router#configure terminal 
+Router(config)#router rip
+Router(config-router)#network 10.0.0.0
+Router(config-router)#no auto-summary 
+
+```
