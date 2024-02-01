@@ -173,8 +173,7 @@ Router(config-if)#no shutdown
 ## Configure Static Routes on a Router:
 
 ```sh
-Router(config)#interface gigabitEthernet0/0/0
-Router(config-if)#ip address 10.10.10.1 255.255.255.0
-Router(config-if)#no shutdown
+Router(config)#ip route 10.10.10.0 255.255.255.0 10.10.1.1 
+Router(config)#ip route 10.10.11.0 255.255.255.0 10.10.1.1 
 
 ```
