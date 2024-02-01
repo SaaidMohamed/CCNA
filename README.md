@@ -187,3 +187,16 @@ Router(config-router)#network 10.0.0.0
 Router(config-router)#no auto-summary 
 
 ```
+
+## Configure IS-IS:
+
+```sh
+Router#configure terminal 
+Router(config)#router isis
+Router(config-router)#network 49.0001.0000.0000.0003.00
+Router(config)#interface gigabitEthernet0/0/0
+Router(config-if)#ip router isis
+Router(config)#interface gigabitEthernet0/0/1
+Router(config-if)#ip router isis
+
+```
