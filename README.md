@@ -161,3 +161,11 @@ Router(config)#no shutdown                         --->(enable Interface)
 
 ```
 
+## Configure IP Addresses on Routers' Interfaces:
+
+```sh
+Router(config)#interface gigabitEthernet0/0/0
+Router(config-if)#ip address 10.10.10.1 255.255.255.0
+Router(config-if)#no shutdown
+
+```
