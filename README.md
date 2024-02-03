@@ -215,6 +215,7 @@ Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
 ```sh
 Router#configure terminal 
 Router(config)#router EIGRP 100
+Router(config-router)#no auto-summary 
 Router(config-router)#network 10.0.0.0 0.255.255.255 
 
 ```
