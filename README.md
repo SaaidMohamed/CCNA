@@ -178,7 +178,7 @@ Router(config)#ip route 10.10.11.0 255.255.255.0 10.10.1.1
 
 ```
 
-## Configure RIP:
+## Configure RIP (120/HOPS):
 
 ```sh
 Router#configure terminal 
@@ -188,7 +188,7 @@ Router(config-router)#no auto-summary
 
 ```
 
-## Configure IS-IS:
+## Configure IS-IS (115/HOPS&COST):
 
 ```sh
 Router#configure terminal 
@@ -201,7 +201,16 @@ Router(config-if)#ip router isis
 
 ```
 
-## Configure OSPF:
+## Configure OSPF(110/COST):
+
+```sh
+Router#configure terminal 
+Router(config)#router OSPF 1
+Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
+
+```
+
+## Configure EIGRPOSPF(90/COST):
 
 ```sh
 Router#configure terminal 
