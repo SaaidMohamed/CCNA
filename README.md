@@ -185,6 +185,8 @@ Router#configure terminal
 Router(config)#router rip
 Router(config-router)#network 10.0.0.0
 Router(config-router)#no auto-summary 
+Router(config-router)#passive interface loopback interface 0
+Router(config-router)#passive interface fastEthernet0/1
 
 ```
 
