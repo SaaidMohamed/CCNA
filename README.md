@@ -189,6 +189,14 @@ Router(config-router)#no auto-summary
 Router(config-router)#passive interface loopback interface 0
 Router(config-router)#passive interface fastEthernet0/1
 
+Router(config)#interface fastEthernet0/1 (interface we send summaries out of)
+Router(config-if)#ip summary-address rip 10.0.0.0 255.255.0.0
+
+- verify
+Router#show ip protocols 
+Router#show run | section rip
+Router#show ip route
+Router#show ip rip database
 ```
 
 ## Configure IS-IS (115/HOPS&COST --> manually configure bandwidth on interfaces for IS-IS to use cost):
