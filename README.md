@@ -202,6 +202,7 @@ Router#show ip protocols
 Router#show run | section rip
 Router#show ip route
 Router#show ip rip database
+
 ```
 
 ## Configure IS-IS (115/HOPS&COST --> manually configure bandwidth on interfaces for IS-IS to use cost):
