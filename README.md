@@ -192,7 +192,12 @@ Router(config-router)#passive interface fastEthernet0/1
 Router(config)#interface fastEthernet0/1 (interface we send summaries out of)
 Router(config-if)#ip summary-address rip 10.0.0.0 255.255.0.0
 
-- verify
+-inject default Static route with RIP:
+Router(config)# ip route 0.0.0.0 0.0.0.0 203.0.113.2 (to the internet interface)
+Router(config)#router rip
+Router(config-router)# default-informatio originate
+
+- verify:
 Router#show ip protocols 
 Router#show run | section rip
 Router#show ip route
