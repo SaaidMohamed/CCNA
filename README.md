@@ -167,7 +167,22 @@ Switch(config)# port-channel load-balance dst-mac
 
 ```
 
+-PAgP (Port Aggregation Protocol "desirable/auto")
 
+```sh
+Group Interfaces:
+Switch(config)#interface range gigabitEthernet0/1-2
+Switch(config-if-range)#channel-group 1 mode desirable
+
+Configure Grouped Interfaces:
+Switch(config)#interface port-channel 1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20
+
+EtherChannel Load-Balancing:
+Switch(config)# port-channel load-balance dst-mac
+
+```
 
 ## IPv6 Routing:
 
