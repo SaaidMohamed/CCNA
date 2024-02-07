@@ -276,5 +276,6 @@ Router#show ip protocols
 Router#show run | section EIGRP
 Router# show ip route
 Router#show ip EIGRP database
+Router#show ip EIGRP neighbors
 
 ```
