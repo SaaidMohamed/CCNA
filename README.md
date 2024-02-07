@@ -268,5 +268,13 @@ Router#configure terminal
 Router(config)#router EIGRP 100
 Router(config-router)#no auto-summary 
 Router(config-router)#network 10.0.0.0 0.255.255.255 
+Router(config-router)#EIGRP router-id 2.2.2.2
+
+
+-verify:
+Router#show ip protocols 
+Router#show run | section EIGRP
+Router# show ip route
+Router#show ip EIGRP database
 
 ```
