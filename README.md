@@ -150,6 +150,18 @@ SW1#show interfaces trunk
 
 ```
 
+## Etherchannel:
+
+```sh
+SW1#show VLAN
+SW1#show vlan brief 
+SW1#show interfaces vlan 1
+SW1#show interfaces trunk
+
+```
+
+
+
 ## IPv6 Routing:
 
 ```sh
