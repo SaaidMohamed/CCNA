@@ -152,11 +152,18 @@ SW1#show interfaces trunk
 
 ## Etherchannel:
 
+-LACP (Link Aggregation Control Protocol "active/passive")
 ```sh
-SW1#show VLAN
-SW1#show vlan brief 
-SW1#show interfaces vlan 1
-SW1#show interfaces trunk
+Switch(config)#interface range gigabitEthernet0/1-2
+Switch(config-if-range)#channel-group 1 mode active
+
+-Configure Grouped Interfaces:
+Switch(config)#interface port-channel 1
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk allowed vlan 10,20
+
+-EtherChannel Load-Balancing:
+Switch(config)# port-channel load-balance dst-mac
 
 ```
 
