@@ -262,11 +262,12 @@ Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
 
 
 - verify:
+Router#show ip OSPF neighbors
 Router#show ip protocols 
 Router#show run | section OSPF
 Router#show ip route
 Router#show ip OSPF database
-Router#show ip OSPF neighbor
+
 
 
 ```
