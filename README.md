@@ -258,7 +258,11 @@ Router(config-if)#ip router isis
 Router#configure terminal 
 Router(config)#router OSPF 1
 Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
-Router(config-router)#router-id 2.2.2.2 
+Router(config-router)#router-id 2.2.2.2 (use configured ip on the router)
+Router(config-router)#passive interface loopback interface 0 (passive int will be advertised but
+                                                                wont form any adjacencies)
+Router(config-router)#passive interface fastEthernet0/1
+
 
 
 
