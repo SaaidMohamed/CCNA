@@ -261,8 +261,13 @@ Router(config-router)#network 10.0.0.0 0.255.255.255 area 0
 Router(config-router)#router-id 2.2.2.2 (use configured ip on the router)
 Router(config-router)#passive interface loopback interface 0 (passive int will be advertised but
                                                                 wont form any adjacencies)
-Router(config-router)#passive interface fastEthernet0/1
+Router(config-router)#passive interface fastEthernet0/3 (interface to ISP we don't want it to form any adjacencies)
 
+
+-inject default Static route with OSPF:
+Router(config)# ip route 0.0.0.0 0.0.0.0 203.0.113.2 (to the internet interface)
+Router(config)#router OSPF
+Router(config-router)# default-informatio originate
 
 
 
