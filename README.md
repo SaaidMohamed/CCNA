@@ -270,6 +270,14 @@ Router(config)#router OSPF 1
 Router(config-router)# default-information originate
 
 
+-ABR(area border router) summarization:
+Router(config)#router OSPF 1
+Router(config-router)#network 10.1.0.0 0.0.255.255 area 0
+Router(config-router)#network 10.0.0.0 0.0.255.255 area 1
+Router(config-router)#area 0 range 10.1.0.0 255.255.0.0
+Router(config-router)#area 1 range 10.0.0.0 255.255.0.0
+
+
 
 - verify:
 Router#show ip OSPF neighbors
