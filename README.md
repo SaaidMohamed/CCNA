@@ -284,8 +284,6 @@ Router#show run | section OSPF
 Router#show ip route
 Router#show ip OSPF database
 
-
-
 ```
 
 ## Configure EIGRP(90/COST):
