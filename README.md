@@ -312,8 +312,29 @@ Router(config)#interface GigabitEthernet0/0
 Router(config-if)#speed 100        (from default 1000Mbps to 100Mbps)
 
 -Serial Interfaces:
-Router(config)#interface aux1    
+Router(config)#interface Serial 1/0    
 Router(config-if)#clock rate 64000 (from default 1.544Mbps to 64kbps)
 
+```
+
+## Interface bandwidth (does not change physical speed):
+
+```sh
+-Ethernet interfaces:
+Router(config)#interface GigabitEthernet0/0     
+Router(config-if)#bandwidth 100        (from default 1000Mbps to 100Mbps)
+
+-Serial Interfaces:
+Router(config)#interface Serial 1/0    
+Router(config-if)#bandwidth 768 (from default 1.544Mbps to 768)
+
+-bandwidth reference:
+Router(config)#router OSPF 1
+Router(config-router)#auto-cost reference-bandwidth 100000 (from default 100 to 100000 to prefer 1Gig+ interfaces )
+
+
+-prfered way of manupulating cost:
+Router(config)#interface GigabitEthernet0/0  
+Router(config-if)#ip ospf cost 60
 
 ```
