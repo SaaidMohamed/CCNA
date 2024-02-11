@@ -304,11 +304,10 @@ Router#show ip EIGRP neighbors
 
 ```
 
-## Interfaces speed:
+## Interface speed:
 
 ```sh
 -Ethernet interfaces:
-
 Router(config)#interface GigabitEthernet0/0     
 Router(config-if)#speed 100        (from default 1000Mbps to 100Mbps)
 
