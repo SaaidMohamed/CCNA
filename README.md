@@ -277,6 +277,19 @@ Router(config-router)#network 10.0.0.0 0.0.255.255 area 1
 Router(config-router)#area 0 range 10.1.0.0 255.255.0.0
 Router(config-router)#area 1 range 10.0.0.0 255.255.0.0
 
+-bandwidth reference:
+Router(config)#router OSPF 1
+Router(config-router)#auto-cost reference-bandwidth 100000 (from default 100 to 100000 to prefer 1Gig+ interfaces )
+
+-prfered way of manupulating ospf cost:
+Router(config)#interface GigabitEthernet0/0  
+Router(config-if)#ip ospf cost 60
+
+
+-ospf hello-interval:
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip ospf hello-interval 5
+
 - verify:
 Router#show ip OSPF neighbors
 Router#show ip protocols 
@@ -327,14 +340,5 @@ Router(config-if)#bandwidth 100        (from default 1000Mbps to 100Mbps)
 -Serial Interfaces:
 Router(config)#interface Serial 1/0    
 Router(config-if)#bandwidth 768 (from default 1.544Mbps to 768)
-
--bandwidth reference:
-Router(config)#router OSPF 1
-Router(config-router)#auto-cost reference-bandwidth 100000 (from default 100 to 100000 to prefer 1Gig+ interfaces )
-
-
--prfered way of manupulating cost:
-Router(config)#interface GigabitEthernet0/0  
-Router(config-if)#ip ospf cost 60
 
 ```
