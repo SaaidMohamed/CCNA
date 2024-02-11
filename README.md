@@ -303,3 +303,18 @@ Router#show ip EIGRP database
 Router#show ip EIGRP neighbors
 
 ```
+
+## Interfaces speed:
+
+```sh
+-Ethernet interfaces:
+
+Router(config)#interface GigabitEthernet0/0     
+Router(config-if)#speed 100        (from default 1000Mbps to 100Mbps)
+
+-Serial Interfaces:
+Router(config)#interface aux1    
+Router(config-if)#clock rate 64000 (from default 1.544Mbps to 64kbps)
+
+
+```
