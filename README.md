@@ -289,6 +289,7 @@ Router(config-if)#ip ospf cost 60
 -ospf hello-interval:
 Router(config)#interface gigabitEthernet 0/1
 Router(config-if)#ip ospf hello-interval 5
+Router(config-if)#ip mtu 1460
 
 - verify:
 Router#show ip OSPF neighbors
