@@ -291,10 +291,10 @@ Router(config)#interface gigabitEthernet 0/1
 Router(config-if)#ip ospf hello-interval 5
 Router(config-if)#ip mtu 1460
 
--OSPF Priority to elect DR(Designated Router) & BDR(Backup Designated Router) 
+-Multi-Access Segment OSPF Priority to elect DR(Designated Router,224.0.0.6) & BDR(Backup Designated Router) 
 Router(config)#interface gigabitEthernet 0/1
 Router(config-if)#ip ospf Priority 100    (0-255 if 0 router will never be a DR,
-for BDR on a different interface any number less than 100 and greater than 1)
+for BDR on a different interface any number less than 100 and greater than 1. restart needed)
 
 
 - verify:
