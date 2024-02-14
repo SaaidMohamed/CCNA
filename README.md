@@ -349,4 +349,3 @@ Router(config)#interface Serial 1/0
 Router(config-if)#bandwidth 768 (from default 1.544Mbps to 768)
 
 ```
-
