@@ -274,8 +274,8 @@ Router(config-router)# default-information originate
 Router(config)#router OSPF 1
 Router(config-router)#network 10.1.0.0 0.0.255.255 area 0
 Router(config-router)#network 10.0.0.0 0.0.255.255 area 1
-Router(config-router)#area 0 range 10.1.0.0 255.255.0.0
-Router(config-router)#area 1 range 10.0.0.0 255.255.0.0
+Router(config-router)#area 0 range 10.1.0.0 255.255.0.0 (summarize above networks)
+Router(config-router)#area 1 range 10.0.0.0 255.255.0.0 (summarize above networks)
 
 -bandwidth reference:
 Router(config)#router OSPF 1
@@ -298,7 +298,8 @@ Router(config-if)#ip ospf Priority 100    (0-255 if 0 router will never be a DR,
 for BDR on a different interface any number less than 100 and greater than 1. restart needed)
 
 - verify:
-Router#show ip OSPF neighbors
+Router#sh
+ow ip OSPF neighbors
 Router#show ip protocols 
 Router#show run | section OSPF
 Router#show ip route
