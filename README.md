@@ -67,8 +67,8 @@ SW1#show cdp neighbors detail
 -Enable LLDP:
 
 ```sh
-SW1(config)#lldp run                          (enable CDP all interfaces)
-SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
+SW1(config)#lldp run                          (enable LLDP all interfaces)
+SW1(config)#interface fastEthernet0/6        (enable LLDP specific interface)
 SW1(config-if)#lldp transmit 
 SW1(config-if)#lldp receive
 
