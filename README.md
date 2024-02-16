@@ -41,7 +41,7 @@ SW1(config)#     ip default-gateway 10.10.10.2
 ```sh
 SW1(config)#cdp run                          (enable CDP all interfaces)
 SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
-SW1(config-if)#no cdp enable 
+SW1(config-if)#cdp enable 
 
 ```
 
