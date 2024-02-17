@@ -299,7 +299,8 @@ Router(config-router)#area 1 range 10.0.0.0 255.255.0.0 (summarize above network
 
 -bandwidth reference:
 Router(config)#router OSPF 1
-Router(config-router)#auto-cost reference-bandwidth 100000 (from default 100 to 100000 to prefer 1Gig+ interfaces )
+Router(config-router)#auto-cost reference-bandwidth 100000 (from default 100 to 
+                                                   100000 to prefer 1Gig+ interfaces)
 
 
 -prfered way of manupulating ospf cost:
