@@ -148,9 +148,9 @@ Switch(config-if)#switchport nonegotiate (disable DTP)
 
 -VTP (VLAN Trunking Protocol) to centerlize one switch as a server for creating and deleting VLANs
 Switch(config)#vtp domain DomainName
-Switch(config)#vtp mode server (default, only switch with higher)
-Switch(config)#vtp mode client (gets vlan updates from server with higher )
-Switch(config)#vtp mode transparent (only passes changes between server and client)
+Switch(config)#vtp mode server         (default, only switch with higher revision number)
+Switch(config)#vtp mode client         (gets vlan updates from server with higher revision number)
+Switch(config)#vtp mode transparent    (only passes changes between server and client)
 
 -Verify VTP:
 SW1#show vtp status
