@@ -120,6 +120,7 @@ Switch#configure terminal
 Switch(config)#interface gigabitethernet 0/1
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 20
+Switch(config-if)#switchport voice vlan 50 (Optional) for ip phone ports only .
 Switch(config-if)#exit
 
 ```
