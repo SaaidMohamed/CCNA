@@ -77,8 +77,8 @@ SW1(config-if)#lldp receive
 -Disable LLDP:
 
 ```sh
-SW1(config)#no lldp run                      (disable CDP all interfaces)
-SW1(config)#interface fastEthernet0/6       (disable CDP specific interface)
+SW1(config)#no lldp run                      (disable LLDP all interfaces)
+SW1(config)#interface fastEthernet0/6       (disable LLDP specific interface)
 SW1(config-if)#no lldp transmit 
 SW1(config-if)#no lldp receive
 
@@ -140,11 +140,12 @@ Switch#copy running-config startup config
 ```
 
 
--Troubleshooting VlANs:
+-Verify VlANs:
 
 ```sh
 SW1#show VLAN
 SW1#show vlan brief 
+SW1#show interfaces 0/1 switchport 
 SW1#show interfaces vlan 1
 SW1#show interfaces trunk
 
