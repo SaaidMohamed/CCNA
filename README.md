@@ -129,12 +129,11 @@ Switch(config-if)#exit
 ```sh
 Switch#configure terminal
 Switch(config)#interface gigabitethernet 0/2
+Switch(config-if)#description Trunk to SW3 (Optional) for Troubleshooting purposes only.
 Switch(config-if)#switchport mode trunk
 Switch(config-if)#switchport trunk allowed vlan 10,20
 Switch(config-if)#switchport access vlan 20  (Optional) Specify the default VLAN, which is used if the interface stops trunking.
 Switch(config-if)#switchport trunk native vlan 20
-Switch(config-if)#exit
-Switch#show vlan
 Switch#copy running-config startup config
 
 ```
