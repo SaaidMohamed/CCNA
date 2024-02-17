@@ -138,6 +138,13 @@ Switch(config-if)#switchport access vlan 20  (Optional) Specify the default VLAN
 Switch(config-if)#switchport trunk native vlan 20
 Switch#copy running-config startup config
 
+
+-DTP (Dynamic Trunking Protocol)
+Switch(config)#interface gigabitethernet 0/2
+Switch(config-if)#switchport mode dynamic auto (will form a trunk only if other side is trunk or desirable)
+Switch(config-if)#switchport mode dynamic desirable (will form a trunk in all cases, defaults in legacy switches)
+Switch(config-if)#switchport nonegotiate (disable DTP)
+
 ```
 
 
