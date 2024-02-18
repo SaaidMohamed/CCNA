@@ -169,6 +169,21 @@ SW1#show interfaces trunk
 
 ```
 
+## Inter-VLAN Routing:
+
+-Router with Separate Interfaces:
+```sh
+Router(config)#interface gigabitEthernet0/0/0
+Router(config-if)#ip address 10.10.10.1 255.255.255.0
+Router(config-if)#no shutdown
+
+Switch(config)#interface gigabitethernet 0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 20
+
+
+```
+
 ## Etherchannel:
 
 -LACP (Link Aggregation Control Protocol "active/passive")
