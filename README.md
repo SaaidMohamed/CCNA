@@ -199,6 +199,17 @@ Router(config-subif)#encapsulation dot1Q 10
 Router(config-subif)#ip address 10.0.0.1 255.255.255.0
 Router(config-subif)#exit
 
+
+-L3 Switch Inter-VLAN:
+```sh
+Switch(config)#ip routing
+Switch(config)#interface vlan 10
+Router(config-if)#ip address 10.0.10.1 255.255.255.0
+Switch(config)#interface vlan 20
+Router(config-if)#ip address 10.0.20.1 255.255.255.0
+
+```
+
 ```
 
 ## Etherchannel:
