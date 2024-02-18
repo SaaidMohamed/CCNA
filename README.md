@@ -183,26 +183,23 @@ Switch(config-if)#switchport access vlan 20
 
 ```
 
--Router with Separate Interfaces:
+-Router on a Stick:
 ```sh
 Router(config)#interface gigabitEthernet0/0/0     ( bring router interface gig0 up )
 Router(config-if)#no shut
 Router(config-if)#exit
 
-Router(config)#interface gigabitEthernet0/0/0.1    ( create subinterfaces for Native VLAN with dot1q)
+Router(config)#interface gigabitEthernet0/0/0.1    ( create subinterface for Native VLAN with dot1q)
 Router(config-subif)#encapsulation dot1Q 1
 Router(config-subif)#encapsulation dot1Q 1 native 
 Router(config-subif)#exit
 
-Router(config)#interface gigabitEthernet0/0/0.10    ( create subinterfaces for each VLAN with dot1q VLAN 10in this example)
+Router(config)#interface gigabitEthernet0/0/0.10    ( create subinterfaces for each VLAN with dot1q VLAN 10 in this example)
 Router(config-subif)#encapsulation dot1Q 10
 Router(config-subif)#ip address 10.0.0.1 255.255.255.0
 Router(config-subif)#exit
 
 ```
-
-
-
 
 ## Etherchannel:
 
