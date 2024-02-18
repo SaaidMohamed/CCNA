@@ -181,8 +181,16 @@ Switch(config)#interface gigabitethernet 0/1
 Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 20
 
+```
+
+-Router with Separate Interfaces:
+```sh
+
 
 ```
+
+
+
 
 ## Etherchannel:
 
