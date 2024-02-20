@@ -190,23 +190,34 @@ Router(config-if)#no shut
 Router(config-if)#exit
 
 Router(config)#interface gigabitEthernet0/0/0.1    ( create subinterface for Native VLAN with dot1q)
-Router(config-subif)#encapsulation dot1Q 1
-Router(config-subif)#encapsulation dot1Q 1 native 
+Router(config-subif)#encapsulation dot1Q 188
+Router(config-subif)#encapsulation dot1Q 188 native 
 Router(config-subif)#exit
 
 Router(config)#interface gigabitEthernet0/0/0.10    ( create subinterfaces for each VLAN with dot1q VLAN 10 in this example)
 Router(config-subif)#encapsulation dot1Q 10
 Router(config-subif)#ip address 10.0.0.1 255.255.255.0
 Router(config-subif)#exit
+
+Switch(config)#interface gigabitethernet 0/1  (uplink from Switch to router)
+Switch(config-if)#switchport trunk encapsulation dot1Q
+Switch(config-if)#switchport mode trunk
+Switch(config-if)#switchport trunk native vlan 188
+
 ```
 
 -L3 Switch Inter-VLAN:
 ```sh
 Switch(config)#ip routing
 Switch(config)#interface vlan 10
-Router(config-if)#ip address 10.0.10.1 255.255.255.0
+Switch(config-if)#ip address 10.0.10.1 255.255.255.0
 Switch(config)#interface vlan 20
-Router(config-if)#ip address 10.0.20.1 255.255.255.0
+Switch(config-if)#ip address 10.0.20.1 255.255.255.0
+
+Switch(config)#interface gigabitethernet 0/1  (uplink from Switch to router)
+witch(config-if)#no switchport
+Switch(config-if)#ip address 10.0.50.1 255.255.255.0
+Switch(config)#ip 0.0.0.0 0.0.0.0 10.0.50.2 
 
 ```
 
