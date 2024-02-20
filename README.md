@@ -157,7 +157,6 @@ SW1#show vtp status
 
 ```
 
-
 -Verify VlANs:
 
 ```sh
