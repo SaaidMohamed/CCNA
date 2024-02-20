@@ -15,7 +15,6 @@
 SW1(config)#hostname AccessSwitch1
 
 ```
-
 *secure enable prompt:
 
 ```sh
