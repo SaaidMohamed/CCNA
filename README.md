@@ -368,6 +368,7 @@ Router(config)#interface gigabitEthernet 0/1
 Router(config-if)#ip ospf Priority 100    (0-255 if 0 router will never be a DR,
 for BDR on a different interface any number less than 100 and greater than 1. restart needed)
 
+
 - verify:
 Router#sh
 ow ip OSPF neighbors
