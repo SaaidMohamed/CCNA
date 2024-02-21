@@ -409,6 +409,7 @@ Router(config)#interface Serial 1/0
 Router(config-if)#clock rate 64000 (from default 1.544Mbps to 64kbps)
 
 ```
+
 ## Interface bandwidth (does not change physical speed):
 
 ```sh
