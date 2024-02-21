@@ -219,7 +219,6 @@ Switch(config)#ip 0.0.0.0 0.0.0.0 10.0.50.2
 
 ```
 
-
 ## Etherchannel:
 
 -LACP (Link Aggregation Control Protocol "active/passive")
