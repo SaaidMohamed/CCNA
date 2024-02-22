@@ -436,4 +436,5 @@ R1(conf-if)#    dns-server 10.10.20.15     (dns server of the clients)
 R1#             show ip dhcp pool
 R1#             show dhcp binding
 
+
 ```
