@@ -422,3 +422,19 @@ Router(config)#interface Serial 1/0
 Router(config-if)#bandwidth 768 (from default 1.544Mbps to 768)
 
 ```
+
+## DHCP on a Router:
+
+```sh
+R1(conf)#       ip dhcp excluded-address 10.10.10.1 10.10.10.10   (range of excluded ip address)
+R1(conf)#       ip dhcp pool Flackbox
+R1(conf-if)#    network 10.10.10.0 255.255.255.0 (network of included ip address)
+R1(conf-if)#    default-router 10.10.10.1  (default gateway of the clients)
+R1(conf-if)#    dns-server 10.10.20.15     (dns server of the clients)
+
+
+-Verify:
+R1#             show ip dhcp pool
+R1#             show dhcp binding
+
+```
