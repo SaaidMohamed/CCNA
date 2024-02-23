@@ -444,10 +444,12 @@ Router(config)#interface GigabitEthernet0/0  (interface connected to clients req
 Router(config-if)# ip helper-address 10.10.30.5 (point clients to dhcp server ip)
 
 ```
-## Configure Router Intf as DHCP Client:
+## Configure Router Interf as DHCP Client:
 ```sh
 Router(config)#interface fastEthernet0/1  (interface connected to ISP to get IP)
 Router(config-if)#ip address dhcp
 Router(config-if)#no shutdown
 
+-verify:
+R1# show dhcp lease
 ```
