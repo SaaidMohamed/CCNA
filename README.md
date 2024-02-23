@@ -437,3 +437,16 @@ R1#             show ip dhcp pool
 R1#             show dhcp binding
 
 ```
+
+## DHCP Server on a Different Network:
+```sh
+Router(config)#interface GigabitEthernet0/0  (interface connected to clients requesting ip)
+Router(config-if)# ip helper-address 10.10.30.5 (point clients to dhcp server ip)
+
+```
+## DHCP Server on a Different Network:
+```sh
+Router(config)#interface GigabitEthernet0/0  (interface connected to clients requesting ip)
+Router(config-if)#
+
+```
