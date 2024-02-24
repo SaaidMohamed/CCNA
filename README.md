@@ -459,6 +459,17 @@ R1# show dhcp lease
 ## FHRP (First Hop Router Protocol):
 ```sh
 -HSRP(Hot Standby Router Protocol)  (active/Standby Pair):
+Router1(config)#interface gig0/1 
+Router1(config-if)#ip address 10.10.10.2 255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#standby 1 ip 10.10.10.1
+
+
+Router2(config)#interface gig0/1
+Router2(config-if)#ip address 10.10.10.3 255.255.255.0
+Router2(config-if)#no shutdown
+Router2(config-if)#standby 1 ip 10.10.10.1
+
 
 
 -VRRP(Virtual Router Redundancy Protocol)  (active/Standby Pair):
