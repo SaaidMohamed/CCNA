@@ -464,7 +464,7 @@ Router1(config-if)#ip address 10.10.10.2 255.255.255.0
 Router1(config-if)#no shutdown
 Router1(config-if)#standby 1 ip 10.10.10.1
 Router1(config-if)#standby 1 Priority 110 (default 100, this router will be active)
-Router1(config-if)#standby 1 Preempt
+Router1(config-if)#standby 1 Preempt (preffered not to preempt)
 Router1(config-if)#standby version 2
 
 
@@ -480,7 +480,6 @@ R1# show standby
 
 
 -VRRP(Virtual Router Redundancy Protocol)  (active/Standby Pair):
-
 
 -GLBP(Gateway Load Balancing Protocol)  (active/active Pair):
 
