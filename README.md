@@ -452,4 +452,18 @@ Router(config-if)#no shutdown
 
 -verify:
 R1# show dhcp lease
+
+```
+
+
+## FHRP (First Hop Router Protocol):
+```sh
+-HSRP(Hot Standby Router Protocol)  (active/Standby Pair):
+
+
+-VRRP(Virtual Router Redundancy Protocol)  (active/Standby Pair):
+
+
+-GLBP(Gateway Load Balancing Protocol)  (active/active Pair):
+
 ```
