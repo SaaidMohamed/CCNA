@@ -462,8 +462,9 @@ R1# show dhcp lease
 Router1(config)#interface gig0/1 
 Router1(config-if)#ip address 10.10.10.2 255.255.255.0
 Router1(config-if)#no shutdown
-Router1(config-if)#standby 1 ip 10.10.10.1
-Router1(config-if)#standby 1 Priority 110 (default 100, this router will be active)
+Router1(config-if)#standby 1 ip 10.10.10.1 (to load balance create 2 group with same config except Priority)
+Router1(config-if)#standby 1 Priority 110 (default 100, this router will be active, 
+                                           if priority not configured highest ip address will be active)
 Router1(config-if)#standby 1 Preempt (preffered not to preempt)
 Router1(config-if)#standby version 2
 
@@ -471,7 +472,7 @@ Router1(config-if)#standby version 2
 Router2(config)#interface gig0/1
 Router2(config-if)#ip address 10.10.10.3 255.255.255.0
 Router2(config-if)#no shutdown
-Router2(config-if)#standby 1 ip 10.10.10.1
+Router2(config-if)#standby 1 ip 10.10.10.1(to load balance create 2 group with same config except Priority)
 Router1(config-if)#standby 1 Priority 90 (default 100, this router will be standby)
 Router1(config-if)#standby version 2
 
