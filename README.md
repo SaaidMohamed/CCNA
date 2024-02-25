@@ -488,6 +488,7 @@ R1# show standby
 
 ## SIP (Spanning-Tree Protocol):
 ```sh
+-Bridge ID: (either MAC Address or 0-65535, default is 32768)
 
 
 ```
