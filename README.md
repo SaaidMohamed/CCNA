@@ -485,3 +485,9 @@ R1# show standby
 -GLBP(Gateway Load Balancing Protocol)  (active/active Pair):
 
 ```
+
+## SIP (Spanning-Tree Protocol):
+```sh
+
+
+```
