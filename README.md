@@ -489,6 +489,8 @@ R1# show standby
 ## SIP (Spanning-Tree Protocol):
 ```sh
 -Bridge ID: (either MAC Address or 0-65535, default is 32768)
+-Root Bridge: is a switch with lowest ID (priority"32768" or MAC address)
+-cost:(10Mbps:100, 100Mbps:19, 1Gbps: 4, 10Gbps:2, 20Gbps:1)
 
 
 ```
