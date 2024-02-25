@@ -492,5 +492,10 @@ R1# show standby
 -Root Bridge: is a switch with lowest ID (priority"32768" or MAC address)
 -cost:(10Mbps:100, 100Mbps:19, 1Gbps: 4, 10Gbps:2, 20Gbps:1)
 
+Switch(config)#spanning-tree pathcost method long/short
+
+
+-Verify:
+Switch#show spanning-tree pathcost method
 
 ```
