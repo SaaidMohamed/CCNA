@@ -262,9 +262,9 @@ Switch(config)# port-channel load-balance dst-mac
 -each switch has only one root port.
 -all ports on rootbridge are Designated ports (looking away from rootbridge).
 -only BPDUs traffic is sent on the blocking links. for failover
--802.1d(1STP for all VLANs)/802.1w(1RSTP for all VLANs)/802.1s(MSTP, loadbalancing)
--PVST+(per VLAN Spanning-tree plus): Cisco inhancement to 802.1d, STP per vlan but still slow.
--RPVST+(Rapid per VLAN Spanning-tree plus):Cisco inhancement to 802.1w, STP per vlan & convergence time is good.
+-802.1d(1STP for all VLANs)/802.1w(1RSTP for all VLANs)/802.1s(MSTP, loadbalancing,groups stp instances)
+-PVST+(per VLAN Spanning-tree plus): Cisco inhancement to 802.1d, STP per vlan but still slow does not group.
+-RPVST+(Rapid per VLAN Spanning-tree plus):Cisco inhancement to 802.1w,STP per vlan & convergence time is good does not group.
 
 Switch(config)#spanning-tree pathcost method long/short
 
