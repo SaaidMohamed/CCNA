@@ -259,8 +259,15 @@ Switch(config)# port-channel load-balance dst-mac
 -Bridge ID: (either MAC Address or 0-65535, default is 32768)
 -Root Bridge: is a switch with lowest ID (priority"32768" or MAC address)
 -cost:(10Mbps:100, 100Mbps:19, 1Gbps: 4, 10Gbps:2, 20Gbps:1)
+-each switch has only one root port.
+-all ports on rootbridge are Designated ports (looking away from rootbridge).
+-only BPDUs traffic is sent on the blocking links. for failover
+-802.1d (1STP for all VLANs)/802.1w(1RSTP for all VLANs)/802.1s(MSTP, loadbalancing)
 
 Switch(config)#spanning-tree pathcost method long/short
+
+Switch(config)#interface fastEthernet 0/1
+Switch(config-if)#spanning-tree cost 1
 
 
 -Verify:
