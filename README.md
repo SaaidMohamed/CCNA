@@ -285,6 +285,21 @@ Switch#show spanning-tree VLAN 1
 
 HSRP and STP :
 ```sh
+Router1(config)#interface gig0/1.10
+Router1(config)#encapsulation dot1Q vlan 10
+Router1(config-if)#ip address 10.10.10.2 255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#standby 1 ip 10.10.10.1
+Router1(config-if)#standby 1 Priority 110 
+Router1(config-if)#standby 1 Preempt 
+
+Router1(config)#interface gig0/1.20
+Router1(config)#encapsulation dot1Q vlan 20
+Router1(config-if)#ip address 10.10.10.2 255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#standby 1 ip 10.10.10.1
+Router1(config-if)#standby 1 Priority 90 
+
 
 
 ```
