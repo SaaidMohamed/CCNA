@@ -276,13 +276,10 @@ witch(config-if)#spanning-tree VLAN 1 root secondary   (select backup root)
 witch(config-if)#spanning-tree VLAN 1 priority 0-61440 (increment of 4096)
 
 -Enable Portfast:
-Switch(config)#interface fastEthernet 0/1 (specific interface)
-Switch(config-if)#spanning-tree portfast
-
 Switch(config)#spanning-tree portfast default (all interfaces)
 
-
-
+Switch(config)#interface fastEthernet 0/1 (specific interface)
+Switch(config-if)#spanning-tree portfast
 
 
 -Verify:
