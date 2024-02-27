@@ -275,8 +275,6 @@ witch(config-if)#spanning-tree VLAN 1 root secondary   (select backup root)
 witch(config-if)#spanning-tree VLAN 1 priority 0-61440 (increment of 4096)
 
 
-
-
 -Verify:
 Switch#show spanning-tree pathcost method
 Switch#show spanning-tree
@@ -284,6 +282,12 @@ Switch#show spanning-tree VLAN 1
 
 ```
 
+
+HSRP and STP :
+```sh
+
+
+```
 
 ## IPv6 Routing:
 
