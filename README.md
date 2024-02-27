@@ -300,6 +300,9 @@ Router1(config-if)#no shutdown
 Router1(config-if)#standby 1 ip 10.10.10.1
 Router1(config-if)#standby 1 Priority 90 
 
+Switch(config)#spanning-tree vlan 10 root primary
+Switch(config)#spanning-tree vlan 20 root secondary
+
 
 
 ```
