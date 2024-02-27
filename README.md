@@ -283,6 +283,11 @@ Switch(config)#interface fastEthernet 0/1 (specific interface)
 Switch(config-if)#spanning-tree portfast
 Switch(config-if)#spanning-tree bpduguard enable
 
+-Enable RootGuard:(make sure no other switch becomes root bridge)
+Switch(config)#interface fastEthernet 0/1 (configure all interfaces except secondary rootbridge interf)
+Switch(config-if)#spanning-tree guard root
+
+
 
 -Verify:
 Switch#show spanning-tree pathcost method
