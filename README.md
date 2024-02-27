@@ -283,8 +283,9 @@ Switch#show spanning-tree VLAN 1
 ```
 
 
-HSRP and STP :
+HSRP and STP with Router on a Stick :
 ```sh
+
 Router1(config)#interface gig0/1.10
 Router1(config)#encapsulation dot1Q vlan 10
 Router1(config-if)#ip address 10.10.10.2 255.255.255.0
@@ -295,7 +296,7 @@ Router1(config-if)#standby 1 Preempt
 
 Router1(config)#interface gig0/1.20
 Router1(config)#encapsulation dot1Q vlan 20
-Router1(config-if)#ip address 10.10.10.2 255.255.255.0
+Router1(config-if)#ip address 10.10.20.2 255.255.255.0
 Router1(config-if)#no shutdown
 Router1(config-if)#standby 1 ip 10.10.10.1
 Router1(config-if)#standby 1 Priority 90 
@@ -305,24 +306,25 @@ Switch1(config)#spanning-tree vlan 20 root secondary
 
 
 
+
 Router2(config)#interface gig0/1.10
 Router2(config)#encapsulation dot1Q vlan 10
-Router2(config-if)#ip address 10.10.10.2 255.255.255.0
+Router2(config-if)#ip address 10.10.10.3 255.255.255.0
 Router2(config-if)#no shutdown
 Router2(config-if)#standby 1 ip 10.10.10.1
-Router2(config-if)#standby 1 Priority 110 
-Router2(config-if)#standby 1 Preempt 
+Router2(config-if)#standby 1 Priority 90
+
 
 Router2(config)#interface gig0/1.20
 Router2(config)#encapsulation dot1Q vlan 20
-Router2(config-if)#ip address 10.10.10.2 255.255.255.0
+Router2(config-if)#ip address 10.10.10.3 255.255.255.0
 Router2(config-if)#no shutdown
-Router2(config-if)#standby 1 ip 10.10.10.1
-Router2(config-if)#standby 1 Priority 90 
+Router2(config-if)#standby 1 ip 10.10.20.1
+Router2(config-if)#standby 1 Priority 110 
+Router2(config-if)#standby 1 Preempt 
 
-Switch2(config)#spanning-tree vlan 10 root primary
-Switch2(config)#spanning-tree vlan 20 root secondary
-
+Switch2(config)#spanning-tree vlan 20 root primary
+Switch2(config)#spanning-tree vlan 10 root secondary
 
 ```
 
