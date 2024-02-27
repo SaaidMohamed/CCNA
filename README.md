@@ -272,6 +272,8 @@ Switch(config)#interface fastEthernet 0/1
 Switch(config-if)#spanning-tree cost 1              (change cost of an interface)
 Switch(config-if)#spanning-tree VLAN 1 root primary (select primary root)
 witch(config-if)#spanning-tree VLAN 1 root secondary (select backup root)
+witch(config-if)#spanning-tree VLAN 1 priority 0-61440 (increment of 4096)
+
 
 
 
