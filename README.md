@@ -288,6 +288,7 @@ Switch(config-if)#spanning-tree guard root
 
 
 
+
 -Verify:
 Switch#show spanning-tree pathcost method
 Switch#show spanning-tree
