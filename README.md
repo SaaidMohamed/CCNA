@@ -253,7 +253,6 @@ Switch(config)# port-channel load-balance dst-mac
 
 ```
 
-
 ## STP (Spanning-Tree Protocol):
 ```sh
 -Bridge ID: (either MAC Address or 0-65535, default is 32768)
