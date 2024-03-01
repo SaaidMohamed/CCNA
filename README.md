@@ -499,7 +499,6 @@ R1# show dhcp lease
 
 ```
 
-
 ## FHRP (First Hop Router Protocol):
 ```sh
 -HSRP(Hot Standby Router Protocol)  (active/Standby Pair):
@@ -575,3 +574,4 @@ Switch2(config)#spanning-tree vlan 20 root primary
 Switch2(config)#spanning-tree vlan 10 root secondary
 
 ```
+
