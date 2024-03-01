@@ -236,6 +236,7 @@ Switch(config)# port-channel load-balance dst-mac
 
 ```
 
+
 -PAgP (Port Aggregation Protocol "desirable/auto")
 
 ```sh
