@@ -124,6 +124,7 @@ Switch(config-if)#exit
 
 ```
 
+
 -Configuring Trunk Ports:
 
 ```sh
