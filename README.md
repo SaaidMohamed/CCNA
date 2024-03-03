@@ -253,6 +253,11 @@ Switch(config-if)#switchport trunk allowed vlan 10,20
 EtherChannel Load-Balancing:
 Switch(config)# port-channel load-balance dst-mac
 
+-Layer 3 Etherchannel:
+Switch(config)#interface range gigabitEthernet0/1-2
+Switch(config-if-range)# no switchport
+Switch(config-if-range)#channel-group 1 mode  active | desirable | on
+
 ```
 
 ## STP (Spanning-Tree Protocol):
