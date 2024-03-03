@@ -124,6 +124,7 @@ Switch(config-if)#exit
 
 ```
 
+
 -Configuring Trunk Ports:
 
 ```sh
@@ -550,7 +551,6 @@ Router1(config-if)#standby 1 Priority 90
 
 Switch1(config)#spanning-tree vlan 10 root primary
 Switch1(config)#spanning-tree vlan 20 root secondary
-
 
 
 
