@@ -258,6 +258,10 @@ Switch(config)#interface range gigabitEthernet0/1-2
 Switch(config-if-range)# no switchport
 Switch(config-if-range)#channel-group 1 mode  active | desirable | on
 
+Switch(config)#interface port-channel 1
+Switch(config-if)#ip address 10.10.10.1 255.255.255.0
+Switch(config-if)#no shutdown
+
 ```
 
 ## STP (Spanning-Tree Protocol):
