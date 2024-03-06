@@ -299,6 +299,7 @@ Switch(config-if)#spanning-tree guard root
 
 
 
+
 -Verify:
 Switch#show spanning-tree pathcost method
 Switch#show spanning-tree
@@ -306,10 +307,16 @@ Switch#show spanning-tree VLAN 1
 
 ```
 
-## IPv6 Routing:
+## Port Security Configuration:
 
 ```sh
+Switch(config)#interface fastEthernet 0/1 (interface to limit to only one MAC address)
+Switch(config-if)#switchport port-Security
 
+
+
+-verify:
+Switch# show port-Security interface fa0/1
 
 ```
 
