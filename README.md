@@ -517,6 +517,11 @@ Switch(config-if)#ip dhcp Snooping trust
 
 ```
 
+## DAI (Dynamic ARP Inspection): (Works with DHCP snooping to map ip provided by dhcp to MAC address to prevent ARP Spoofing/Poisoning)
+```sh
+
+```
+
 
 ## FHRP (First Hop Router Protocol):
 ```sh
