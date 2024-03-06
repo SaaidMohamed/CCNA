@@ -508,11 +508,11 @@ R1# show dhcp lease
 
 ```
 
-## DHCP Snooping on Switches:
+## DHCP Snooping on Switches: (for switch to only trust requests coming from specific DHCP interface)
 ```sh
-Switch(config)#ip dhcp Snooping    (enable globally)
+Switch(config)#ip dhcp Snooping            (enable globally)
 Switch(config)#ip dhcp Snooping vlan 20    (enable on vlan)
-Switch(config)# interface fa0/3
+Switch(config)# interface fa0/3            (interface coming from dhcp)
 Switch(config-if)#ip dhcp Snooping trust
 
 ```
