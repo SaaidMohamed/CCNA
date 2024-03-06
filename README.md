@@ -508,6 +508,16 @@ R1# show dhcp lease
 
 ```
 
+## DHCP Snooping on Switches:
+```sh
+Switch(config)#ip dhcp Snooping    (enable globally)
+Switch(config)#ip dhcp Snooping vlan 20    (enable on vlan)
+Switch(config)# interface fa0/3
+Switch(config-if)#ip dhcp Snooping trust
+
+```
+
+
 ## FHRP (First Hop Router Protocol):
 ```sh
 -HSRP(Hot Standby Router Protocol)  (active/Standby Pair):
