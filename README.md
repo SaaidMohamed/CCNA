@@ -317,6 +317,7 @@ Switch(config-if)#switchport port-Security
 
 Switch(config-if)#switchport port-Security violation protect (change port security action mode)
 Switch(config-if)#switchport port-Security maximum 2 (2 MAC addresses)
+Switch(config-if)#switchport port-Security mac-address  444.222.111 (only specific mac address)
 
 
 
