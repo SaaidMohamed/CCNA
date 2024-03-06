@@ -309,6 +309,13 @@ Switch#show spanning-tree VLAN 1
 ## IPv6 Routing:
 
 ```sh
+
+
+```
+
+## IPv6 Routing:
+
+```sh
 Router(config)#ipv6 unicast-routing                --->(enable IPV6 Routing)
 Router(config)#interface GigabitEthernet0/0        --->(change to interface gig0)
 Router(config-if)#ipv6 address fe80::1 link-local  --->(enable link-local IPv6)
