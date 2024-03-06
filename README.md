@@ -517,8 +517,14 @@ Switch(config-if)#ip dhcp Snooping trust
 
 ```
 
-## DAI (Dynamic ARP Inspection): (Works with DHCP snooping to map ip provided by dhcp to MAC address to prevent ARP Spoofing/Poisoning)
+## DAI (Dynamic ARP Inspection): (Works with DHCP snooping to map ip provided by dhcp to MAC address 
+                                      to prevent ARP Spoofing/Poisoning or DOS attack)
 ```sh
+Switch(config)#ip arp inspection vlan 20    (enable on a vlan level to protect all hosts)
+
+Switch(config)# interface fa0/3            (hosts with static ip, or any host that doesn't recieve ip from dchp can't 
+                                             be protected by DAI and need to be excluded & configured to trust arp)
+Switch(config-if)#ip arp inspection trust
 
 ```
 
