@@ -313,8 +313,8 @@ Switch#show spanning-tree VLAN 1
 -port Security action to violation modes: shutdown/protect/restrect
 
 Switch(config)#interface fastEthernet 0/1 (interface to limit to only one MAC address)
+Switch(config-if)#switchport mode access
 Switch(config-if)#switchport port-Security
-
 Switch(config-if)#switchport port-Security violation protect (change port security action mode)
 Switch(config-if)#switchport port-Security maximum 2 (2 MAC addresses)
 Switch(config-if)#switchport port-Security mac-address  444.222.111 (only specific mac address)
