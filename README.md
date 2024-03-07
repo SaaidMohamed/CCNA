@@ -627,3 +627,11 @@ Switch2(config)#spanning-tree vlan 10 root secondary
 
 ```
 
+
+ACLS (Access Control Lists) :
+```sh
+Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 eq 22
+
+
+```
+
