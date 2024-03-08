@@ -658,6 +658,11 @@ Router2(config)#interface gig0/1
 Router2(config-if)# ip access-group 100 out
 Router2(config-if)# ip access-group 103 in
 
+-inject an ACL between existing ones:
+Router2(config)# ip access-list extended ACL_Name
+Router2(config-std-nacl)# 25 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
+
+
 
 -Verify:
 R1# show access-list 100
