@@ -638,6 +638,18 @@ Router1(config)#access-list 1 permit 10.10.10. 0.0.0.255
 Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
 Router2(config)#access-list 100 permit tcp 10.10.10.0 0.0.0.255 gt 49151 10.10.20.40 0.0.0.0 eq 22
 
+-Named ACLs (Standard & Extended):
+Router2(config)# ip access-list standard ACLName
+Router2(config-std-nacl)# deny 10.10.10.11 0.0.0.0 
+Router2(config-std-nacl)# permit 10.10.10.11 0.0.0.0 
+
+Router2(config)# ip access-list extended ACLName
+Router2(config-std-nacl)# deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
+Router2(config-std-nacl)# permit permit tcp 10.10.10.0 0.0.0.255 gt 49151 10.10.20.40 0.0.0.0 eq 22
+
+
+
+
 
 ```
 
