@@ -651,10 +651,16 @@ Router2(config-std-nacl)# permit permit tcp 10.10.10.0 0.0.0.255 gt 49151 10.10.
 Router1(config)#access-list 1 deny host 10.10.10.11 
 Router2(config)#access-list 100 permit tcp any
 
+-Apply access lists to interfaces:
+-only one ACL inbound interface and one outbound interface.
+
+Router2(config)#interface gig0/1
+Router2(config-if)# ip access-group 100 out
+Router2(config-if)# ip access-group 103 in
 
 
-
-
+-Verify:
+R1# show access-list 100
 
 ```
 
