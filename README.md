@@ -635,7 +635,8 @@ Router1(config)#access-list 1 deny 10.10.10.11 0.0.0.0
 Router1(config)#access-list 1 permit 10.10.10. 0.0.0.255
 
 -Extended ACLS : 100-199 /2000-2699 (checks source/destination/tcp/udp/ports)
-Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 eq 22
+Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
+Router2(config)#access-list 100 permit tcp 10.10.10.0 0.0.0.255 gt 49151 10.10.20.40 0.0.0.0 eq 22
 
 
 ```
