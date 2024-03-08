@@ -661,6 +661,7 @@ Router2(config-if)# ip access-group 103 in
 
 -Verify:
 R1# show access-list 100
+R1# show ip interface gig0/1 | include access list
 
 ```
 
