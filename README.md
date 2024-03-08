@@ -630,6 +630,9 @@ Switch2(config)#spanning-tree vlan 10 root secondary
 
 ACLS (Access Control Lists) :
 ```sh
+-Standard ACLS : 1-99/ 1300-1999 (checks only source IP address)
+-Extended ACLS : 100-199 /2000-2699 (checks source/destination/tcp/udp/ports)
+
 Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 eq 22
 
 
