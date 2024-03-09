@@ -632,7 +632,7 @@ ACLS (Access Control Lists) :
 ```sh
 -Standard ACLS : 1-99/ 1300-1999 (checks only source IP address)
 Router1(config)#access-list 1 deny 10.10.10.11 0.0.0.0 
-Router1(config)#access-list 1 permit 10.10.10. 0.0.0.255
+Router1(config)#access-list 1 permit 10.10.10.0 0.0.0.255
 Router2(config-std-nacl)# permit ip any       (to overwrite excplecit deny)
 
 -Extended ACLS : 100-199 /2000-2699 (checks source/destination/tcp/udp/ports)
@@ -703,9 +703,11 @@ Router1(config-if)# ip nat inside
 --then configure a pool of public ip addresses for Dynamic NAT to choose from
 Router1(config)# ip nat pool PoolName 203.0.144.4 203.0.144.15 netmask 255.255.255.240
 
---then create ACL (access list) for internal IP addresses to translate to public ip addresses
+--then create ACL (access list) for internal IP addresses to translate to public ip addresses:
+Router1(config)#access-list 1 permit 10.10.10.0  0.0.0.255
 
-
+--finally, link access list with NAT pool to complete dynamic NAT Config:
+Router1(config)#ip nat inside source list 1 pool PoolName
 
 
 -Verify:
