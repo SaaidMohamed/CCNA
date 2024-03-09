@@ -711,7 +711,8 @@ Router1(config)#ip nat inside source list 1 pool PoolName
 
 
 
--Dynamic NAT Overload (PAT) (Port Address Translation):
+-Dynamic NAT Overload (PAT) (Port Address Translation) 
+                      same config as NAT except adding overload at the end:
 
 -- first determine inside interface and outside interface:
 Router1(config)# interface fa0/1
@@ -729,7 +730,8 @@ Router1(config)#access-list 1 permit 10.10.10.0  0.0.0.255
 --finally, link access list with NAT pool to complete dynamic NAT Overload Config:
 Router1(config)#ip nat inside source list 1 pool PoolName overload
 
--Verify:
+
+-Verify NAT:
 R1# show ip nat translation
 R1# show ip nat statistics
 R1# clear ip nat translations (remove translations from table to edit nat config)
