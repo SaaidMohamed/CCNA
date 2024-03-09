@@ -677,7 +677,8 @@ R1# show ip interface gig0/1 | include access list
 
 NAT (Network Address Translation):
 ```sh
-- first determine inside interface and outside interface:
+-Static NAT:
+-- first determine inside interface and outside interface:
 
 Router1(config)# interface fa0/1
 Router1(config-if)# ip nat outside 
@@ -685,8 +686,25 @@ Router1(config-if)# ip nat outside
 Router1(config)# interface fa0/2
 Router1(config-if)# ip nat inside
 
--then translate in global config
+--then translate in global config
 Router1(config)#ip nat inside source static 10.0.10.10 203.0.114.4
+
+
+
+-Dynamic NAT:
+-- first determine inside interface and outside interface:
+
+Router1(config)# interface fa0/1
+Router1(config-if)# ip nat outside 
+
+Router1(config)# interface fa0/2
+Router1(config-if)# ip nat inside
+
+--then configure a pool of public ip addresses for Dynamic NAT to choose from
+Router1(config)# ip nat pool PoolName 203.0.144.4 203.0.144.15 netmask 255.255.255.240
+
+--then create ACL (access list) for internal IP addresses to translate to public ip addresses
+
 
 
 
