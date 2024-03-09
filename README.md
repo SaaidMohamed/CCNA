@@ -633,6 +633,7 @@ ACLS (Access Control Lists) :
 -Standard ACLS : 1-99/ 1300-1999 (checks only source IP address)
 Router1(config)#access-list 1 deny 10.10.10.11 0.0.0.0 
 Router1(config)#access-list 1 permit 10.10.10. 0.0.0.255
+Router2(config-std-nacl)# permit ip any       (to overwrite excplecit deny)
 
 -Extended ACLS : 100-199 /2000-2699 (checks source/destination/tcp/udp/ports)
 Router2(config)#access-list 100 deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
@@ -642,6 +643,7 @@ Router2(config)#access-list 100 permit tcp 10.10.10.0 0.0.0.255 gt 49151 10.10.2
 Router2(config)# ip access-list standard ACLName
 Router2(config-std-nacl)# deny 10.10.10.11 0.0.0.0 
 Router2(config-std-nacl)# permit 10.10.10.11 0.0.0.0 
+Router2(config-std-nacl)# permit ip any       (to overwrite excplecit deny)
 
 Router2(config)# ip access-list extended ACLName
 Router2(config-std-nacl)# deny tcp 10.10.10.5 0.0.0.0 gt 49151 10.10.20.40 0.0.0.0 eq 22
@@ -672,3 +674,23 @@ R1# show ip interface gig0/1 | include access list
 
 ```
 
+
+NAT (Network Address Translation):
+```sh
+- first determine inside interface and outside interface:
+
+Router1(config)# interface fa0/1
+Router1(config-if)# ip nat outside 
+
+Router1(config)# interface fa0/2
+Router1(config-if)# ip nat inside
+
+-then translate in global config
+Router1(config)#ip nat inside source static 10.0.10.10 203.0.114.4
+
+
+
+-Verify:
+R1# show ip nat translation
+
+```
