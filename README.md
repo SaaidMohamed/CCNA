@@ -712,5 +712,9 @@ Router1(config)#ip nat inside source list 1 pool PoolName
 
 -Verify:
 R1# show ip nat translation
+R1# show ip nat statistics
+R1# clear ip nat translations (remove translations from table to edit nat config)
+R1# clear ip nat translations * (will remove all dynamic nat translations)
+
 
 ```
