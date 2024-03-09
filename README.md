@@ -710,6 +710,25 @@ Router1(config)#access-list 1 permit 10.10.10.0  0.0.0.255
 Router1(config)#ip nat inside source list 1 pool PoolName
 
 
+
+-Dynamic NAT Overload (PAT) (Port Address Translation):
+
+-- first determine inside interface and outside interface:
+Router1(config)# interface fa0/1
+Router1(config-if)# ip nat outside 
+
+Router1(config)# interface fa0/2
+Router1(config-if)# ip nat inside
+
+--then configure a pool of public ip addresses for Dynamic NAT overload to choose from:
+Router1(config)# ip nat pool PoolName 203.0.144.4 203.0.144.15 netmask 255.255.255.240
+
+--then create ACL (access list) for internal IP addresses to translate to public ip addresses and ports:
+Router1(config)#access-list 1 permit 10.10.10.0  0.0.0.255
+
+--finally, link access list with NAT pool to complete dynamic NAT Overload Config:
+Router1(config)#ip nat inside source list 1 pool PoolName overload
+
 -Verify:
 R1# show ip nat translation
 R1# show ip nat statistics
