@@ -354,14 +354,24 @@ Router(config-if)#ipv6 address 2001:db8:0:1::/64 eui-64   (it will look:2001:db8
 
 -Link Local IPv6 Addresses (starts with FE80::/10 - FEB0::/10, hosts should have /64 ipv6 address. can be used for 
 routing protocols hello packet and updates or any communication that shouldn't be forwarded beyond local link)
-_they are automatically generated as EUI-64 Link Local with mac in the middle when ipv6 is enabled on an inteface but can manually changed:
+_they are automatically generated as EUI-64 Link Local with mac in the middle when ipv6 is enabled on an inteface but can manually overwriten:
 
 Router(config)#interface Gig 0/1
 Router(config-if)#ipv6 address FE80::1/64 link-local 
 
+-SLAAC(Stateless Address AutoConfiguration)
+(-when enabling an IPv6 Adrress on an interface it starts sending advertissment with network prfex and default gateway 
+address to hosts using ICMP and Multi-cast address.
+-Hosts will use router advertisments to generate their EUI-64 IPv6 address using thier mac or random mac. DHCP server is still needed for DNS ip
+-Host can also rquest an IPv6 address by sending Router Solicitation message to the router.
+)
+-ND (Neighbor Discovery):
+Neighbor Discovery is equivalant of ARP and use ICMP Neighbor Solicitation and Neighbor Advertisment to multicast addresses.
+
 
 Verify:
-Switch# show ipv6 interface brief
+Router# show ipv6 interface brief
+Router# show ipv6 Neighbors
 
 ```
 
