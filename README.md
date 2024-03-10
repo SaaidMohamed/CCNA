@@ -332,11 +332,18 @@ Switch# show port-Security address
 ## IPv6 Routing:
 
 ```sh
+-ipv6 Global Unicast addresses are 128 bits public addresses, start from 2000:::::::/48 and 
+rest 16 bits are for subnets other half 64bits are for host 
+-
 Router(config)#ipv6 unicast-routing                --->(enable IPV6 Routing)
-Router(config)#interface GigabitEthernet0/0        --->(change to interface gig0)
+Router(config)#interface GigabitEthernet0/0        --->(change to hosts interface gig0)
 Router(config-if)#ipv6 address fe80::1 link-local  --->(enable link-local IPv6)
-Router(config)#ipv6 address 2001:db8:1:1::1/64     --->(enable global unicast address IPv6)
+Router(config)#ipv6 address 2001:db8:1:1::1/64     --->(enable global unicast address IPv6 for public conectivity)
 Router(config)#no shutdown                         --->(enable Interface)
+
+
+Verify:
+Switch# show ipv6 interface brief
 
 ```
 
