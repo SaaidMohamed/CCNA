@@ -349,8 +349,15 @@ Router(config)#interface Gig 0/1
 Router(config-if)#ipv6 address 2001:db8:0:1::/64 eui-64   (it will look:2001:db8:0:1:"c"801:2F"FF:FE"24:0
                                                   C is 7th bit inverted and FF:FE added in middle )
 
+-Unique Local IPv6 Addresses (are like IPv4 Private addresses, with range FC00::/7 and host are assigned FC00::1/64 mask)
 
 
+-Link Local IPv6 Addresses (starts with FE80::/10 - FEB0::/10, hosts should have /64 ipv6 address. can be used for 
+routing protocols hello packet and updates or any communication that shouldn't be forwarded beyond local link)
+_they are automatically generated as EUI-64 Link Local with mac in the middle when ipv6 is enabled on an inteface but can manually changed:
+
+Router(config)#interface Gig 0/1
+Router(config-if)#ipv6 address FE80::1/64 link-local 
 
 
 Verify:
