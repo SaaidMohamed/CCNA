@@ -375,6 +375,7 @@ Router# show ipv6 Neighbors
 
 ```
 
+
 ## Configure IP Addresses on Routers' Interfaces:
 
 ```sh
