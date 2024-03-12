@@ -205,7 +205,6 @@ Switch(config-if)#switchport trunk native vlan 188
 
 ```
 
-
 -L3 Switch Inter-VLAN:
 ```sh
 Switch(config)#ip routing
