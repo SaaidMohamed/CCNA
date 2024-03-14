@@ -33,7 +33,6 @@ SW1(config)#     ip default-gateway 10.10.10.2
 
 ```
 
-
 ## CDP (Cisco Discovery Protocol):
 
 -Enable CDP:
