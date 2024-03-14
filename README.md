@@ -92,6 +92,7 @@ SW1#show lldp neighbors detail
 
 ```
 
+
 ## VLANs (Virtual Local Area Network):
 
 -Create VLANs:
