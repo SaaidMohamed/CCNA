@@ -22,7 +22,6 @@ SW1(config)#hostname AccessSwitch1
 AccessSwitch1(config)#enable secret somePassword
 
 ```
-
 +SVI Managment IP:
 
 ```sh
@@ -33,7 +32,6 @@ SW1(config-if)#  exit
 SW1(config)#     ip default-gateway 10.10.10.2
 
 ```
-
 ## CDP (Cisco Discovery Protocol):
 
 -Enable CDP:
