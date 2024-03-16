@@ -787,5 +787,10 @@ R1#show logging
 Router1(config)#logging 10.10.20.45
 Router1(config)# logging trap debugging 
 
+-logging synchronous:
+Router1(config)#Line console 0
+Router1(config-line)#logging synchronous
+
+
 
 ```
