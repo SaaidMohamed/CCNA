@@ -778,7 +778,14 @@ R1# clear ip nat translations * (will remove all dynamic nat translations)
 Syslog :
 ```sh
 R1#no loggin console   (disable logging to the console line)
+R1#logging monitor 6 (event with severity level 6 and higher will be logged to VTY lines)
+R1#logging buffered debugging (event with severity level 7 and higher will be logged buffer "RAM")
+R1#show logging
 
+
+-log to external server:
+Router1(config)#logging 10.10.20.45
+Router1(config)# logging trap debugging 
 
 
 ```
