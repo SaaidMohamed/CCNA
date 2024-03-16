@@ -773,5 +773,12 @@ R1# show ip nat statistics
 R1# clear ip nat translations (remove translations from table to edit nat config)
 R1# clear ip nat translations * (will remove all dynamic nat translations)
 
+```
+
+Syslog :
+```sh
+R1#no loggin console   (disable logging to the console line)
+
+
 
 ```
