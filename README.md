@@ -32,6 +32,12 @@ SW1(config)#service password-encryption (to encrypt all text passwords)
 SW1(config)# Line console 0
 SW1(config-line)#exec-timeout 15 (if logged in and inactive for 15m session will timeout)
 
+-use username & password instead of one password for all users:
+SW1(config)# username Admin1 secret SomePassword (first user)
+SW1(config)# username Admin2 secret SomePassword2 (second user)
+SW1(config)# Line console 0
+SW1(config-line)# login local (use local logins)
+
 ```
 
 ## secure vty Remote access (vty with ssh or telnet) :
@@ -45,6 +51,13 @@ SW1(config)#service password-encryption (to encrypt all text passwords)
 -Set time of session inactivity:
 SW1(config)# Line vty 0 15     (all 16 vty lines)
 SW1(config-line)#exec-timeout 5 30 (if logged in and inactive for 5m & 30sec session will timeout)
+
+-use username & password instead of one password for all users:
+SW1(config)# username Admin1 secret SomePassword (first user)
+SW1(config)# username Admin2 secret SomePassword2 (second user)
+SW1(config)# Line vty 0 15
+SW1(config-line)# login local (use local logins)
+
 
 ```
 
