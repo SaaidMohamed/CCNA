@@ -22,6 +22,15 @@ SW1(config)#hostname AccessSwitch1
 AccessSwitch1(config)#enable secret somePassword
 
 ```
+
+*secure Console Line:
+```sh
+SW1(config)# Line console 0
+SW1(config-line)#  password somePassword
+SW1(config-line)# login
+
+```
+
 +SVI Managment IP:
 
 ```sh
