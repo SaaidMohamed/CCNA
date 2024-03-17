@@ -29,6 +29,10 @@ SW1(config)# Line console 0
 SW1(config-line)#  password somePassword
 SW1(config-line)# login
 
+-Set time of session inactivity:
+SW1(config)# Line console 0
+SW1(config-line)#exec-timeout 15 (if logged in and inactive for 15m session will timeout)
+
 ```
 
 *secure vty Remote access (vty with ssh or telnet) :
@@ -36,6 +40,11 @@ SW1(config-line)# login
 SW1(config)# Line vty 0 15     (all 15 vty interfaces)
 SW1(config-line)#  password somePassword
 SW1(config-line)# login
+
+
+-Set time of session inactivity:
+SW1(config)# Line vty 0 15     (all 15 vty interfaces)
+SW1(config-line)#exec-timeout 5 30 (if logged in and inactive for 5m & 30sec session will timeout)
 
 ```
 
