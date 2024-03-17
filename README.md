@@ -36,14 +36,14 @@ SW1(config-line)#exec-timeout 15 (if logged in and inactive for 15m session will
 
 ## secure vty Remote access (vty with ssh or telnet) :
 ```sh
-SW1(config)# Line vty 0 15     (all 15 vty interfaces)
+SW1(config)# Line vty 0 15     (all 16 vty lines)
 SW1(config-line)#  password somePassword
 SW1(config-line)# login
 SW1(config)#service password-encryption (to encrypt all text passwords)
 
 
 -Set time of session inactivity:
-SW1(config)# Line vty 0 15     (all 15 vty interfaces)
+SW1(config)# Line vty 0 15     (all 16 vty lines)
 SW1(config-line)#exec-timeout 5 30 (if logged in and inactive for 5m & 30sec session will timeout)
 
 ```
