@@ -31,6 +31,14 @@ SW1(config-line)# login
 
 ```
 
+*secure vty Remote access (vty with ssh or telnet) :
+```sh
+SW1(config)# Line vty 0 15     (all 15 vty interfaces)
+SW1(config-line)#  password somePassword
+SW1(config-line)# login
+
+```
+
 +SVI Managment IP:
 
 ```sh
