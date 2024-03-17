@@ -9,13 +9,12 @@
 
 
 ## Initial Configuration:
-
-+name the device:
-
 ```sh
+-name the device:
 SW1(config)#hostname AccessSwitch1
 
 ```
+
 ## secure privileged exec mode (enable prompt):
 ```sh
 AccessSwitch1(config)#enable secret somePassword
@@ -49,8 +48,16 @@ SW1(config-line)#exec-timeout 5 30 (if logged in and inactive for 5m & 30sec ses
 
 ```
 
-## SVI Managment IP:
+## ACL to Allow only specific users or subnet to access device :
+```sh
+SW1(config)# access-list 1 permit host 10.0.0.10
 
+SW1(config)# Line vty 0 15     (all 15 vty interfaces)
+SW1(config-line)#  access-class 1 in 
+
+```
+
+## SVI Managment IP:
 ```sh
 SW1(config)#     interface vlan1
 SW1(config-if)#  ip address 10.10.10.2 255.255.255.0
@@ -59,10 +66,9 @@ SW1(config-if)#  exit
 SW1(config)#     ip default-gateway 10.10.10.2
 
 ```
+
 ## CDP (Cisco Discovery Protocol):
-
 -Enable CDP:
-
 ```sh
 SW1(config)#cdp run                          (enable CDP all interfaces)
 SW1(config)#interface fastEthernet0/6        (enable CDP specific interface)
