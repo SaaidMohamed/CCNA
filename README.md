@@ -16,18 +16,18 @@
 SW1(config)#hostname AccessSwitch1
 
 ```
-*secure enable prompt:
-
+## secure privileged exec mode (enable prompt):
 ```sh
 AccessSwitch1(config)#enable secret somePassword
 
 ```
 
-*secure Console Line:
+## secure Console Line:
 ```sh
 SW1(config)# Line console 0
 SW1(config-line)#  password somePassword
 SW1(config-line)# login
+SW1(config)#service password-encryption (to encrypt all text passwords)
 
 -Set time of session inactivity:
 SW1(config)# Line console 0
@@ -35,11 +35,12 @@ SW1(config-line)#exec-timeout 15 (if logged in and inactive for 15m session will
 
 ```
 
-*secure vty Remote access (vty with ssh or telnet) :
+## secure vty Remote access (vty with ssh or telnet) :
 ```sh
 SW1(config)# Line vty 0 15     (all 15 vty interfaces)
 SW1(config-line)#  password somePassword
 SW1(config-line)# login
+SW1(config)#service password-encryption (to encrypt all text passwords)
 
 
 -Set time of session inactivity:
@@ -48,7 +49,7 @@ SW1(config-line)#exec-timeout 5 30 (if logged in and inactive for 5m & 30sec ses
 
 ```
 
-+SVI Managment IP:
+## SVI Managment IP:
 
 ```sh
 SW1(config)#     interface vlan1
