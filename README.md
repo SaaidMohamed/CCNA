@@ -80,6 +80,16 @@ SW1(config)#     ip default-gateway 10.10.10.2
 
 ```
 
+## Enable SSH (Secure Shell):
+```sh
+SW1(config)#ip domain-name DomainName.com
+SW1(config)#crypto key generate rsa 
+How Many Bits in the Modulus [512] : 768
+
+
+
+```
+
 ## CDP (Cisco Discovery Protocol):
 -Enable CDP:
 ```sh
