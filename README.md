@@ -82,9 +82,22 @@ SW1(config)#     ip default-gateway 10.10.10.2
 
 ## Enable SSH (Secure Shell):
 ```sh
+-create domain name and generate Crypto Keys:
 SW1(config)#ip domain-name DomainName.com
 SW1(config)#crypto key generate rsa 
 How Many Bits in the Modulus [512] : 768
+
+-enable SSH on VTY Lines:
+SW1(config)# username Admin1 secret SomePassword  (SSH only works with Username and password unlike telnet)
+SW1(config)# Line vty 0 15
+SW1(config-line)# transport input ssh (only ssh is enabled)
+SW1(config-line)# login local         (use local usernames and passwords)
+
+
+
+
+```
+
 
 
 
