@@ -92,16 +92,23 @@ SW1(config)# username Admin1 secret SomePassword  (SSH only works with Username 
 SW1(config)# Line vty 0 15
 SW1(config-line)# transport input ssh (only ssh is enabled)
 SW1(config-line)# login local         (use local usernames and passwords)
+SW1(config-line)#exit
+SW1(config)#ip ssh version 2          (accept only ssh version 2 incoming requests)
+
+```
+
+## Banners:
+```sh
+Router(config)#banner login " (press Enter after open quotes)
+(types message after enter "Autherized users only" end quotes then Enter)
 
 
+Router(config)#banner exec " (press Enter after open quotes)
+(types message after enter "logout if not autherized" end quotes then Enter)
 
 
 ```
 
-
-
-
-```
 
 ## CDP (Cisco Discovery Protocol):
 -Enable CDP:
