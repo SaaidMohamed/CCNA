@@ -40,6 +40,7 @@ SW1(config-line)# login local (use local logins)
 
 ```
 
+
 ## secure vty Remote access (vty with ssh or telnet) :
 ```sh
 SW1(config)# Line vty 0 15     (all 16 vty lines)
