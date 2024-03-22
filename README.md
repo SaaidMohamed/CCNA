@@ -59,7 +59,6 @@ SW1(config)# username Admin2 secret SomePassword2 (second user)
 SW1(config)# Line vty 0 15
 SW1(config-line)# login local (use local logins)
 
-
 ```
 
 ## ACL to Allow only specific users or subnet to access device :
