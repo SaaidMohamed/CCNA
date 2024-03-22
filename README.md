@@ -61,7 +61,6 @@ SW1(config-line)# login local (use local logins)
 
 ```
 
-
 ## ACL to Allow only specific users or subnet to access device :
 ```sh
 SW1(config)# access-list 1 permit host 10.0.0.10
