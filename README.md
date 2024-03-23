@@ -7,7 +7,6 @@
 [CCNA Configuration Guide](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html) is a basic Cisco IOS Configuration reference guide for configuring Cisco switches and routers. 
 
 
-
 ## Initial Configuration:
 ```sh
 -name the device:
