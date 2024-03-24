@@ -8,7 +8,6 @@
 
 
 
-
 ## Initial Configuration:
 ```sh
 -name the device:
